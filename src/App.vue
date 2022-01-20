@@ -56,7 +56,7 @@
         <div class="weather-wrap" v-if="weatherdata" v-cloak>
           <div class="location-box">
             <div class="location">
-              {{ weatherdata.name }} - {{ weatherdata.sys.country }}
+              {{ weatherdata.name }} ({{ weatherdata.sys.country }})
             </div>
             <div class="date">{{ datebuilder() }}</div>
           </div>
@@ -222,7 +222,7 @@ export default {
       let month = months[d.getMonth()];
       let year = d.getFullYear();
 
-      return `${day} - ${date} ${month} - ${year}`;
+      return `${day}-${date} ${month} (${year})`;
     },
   },
 };
@@ -307,27 +307,29 @@ main {
   border-radius: 16px 0px 16px 0px;
 }
 .location-box .location {
-  padding: 7%;
+  padding: 17px;
   color: #fff;
-  font-size: 40px;
+  font-size: 37px;
   font-weight: 650;
-  font-family: "Pacifico", cursive;
+  font-family: "Oswald", sans-serif;
+  font-style: italic;
   text-align: center;
   text-shadow: 1px 3px rgba(0, 0, 0, 0.25);
 }
 .location-box .date {
-  padding: 4%;
+  padding: 12px;
   color: #fff;
-  font-size: 40px;
+  font-size: 38px;
   font-weight: 650;
-  font-family: "Pacifico", cursive;
+  font-family: "Oswald", sans-serif;
+  font-style: italic;
   padding: 15px;
   text-align: center;
   text-shadow: 1px 3px rgba(0, 0, 0, 0.25);
 }
 .weather-box {
   text-align: center;
-  padding: 8%;
+  padding: 17px;
 }
 
 .weather-box .temp {
@@ -391,8 +393,8 @@ main {
   align-self: center;
   border: none;
   outline: none;
-  color: whitesmoke;
-  padding: 11px 27px;
+  color: #f5f5f5;
+  padding: 8px 24px;
   font-size: 30px;
   border-radius: 50%;
 }

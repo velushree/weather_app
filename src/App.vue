@@ -108,6 +108,7 @@ export default {
     setcity(data) {
       document.getElementById("autocomplete").value = data.name;
       this.city = data.name;
+      this.getweather();
     },
     autocomplete() {
       let search = document.getElementById("autocomplete").value;
@@ -282,7 +283,7 @@ main {
 }
 .search-box .search-bar {
   display: block;
-  width: 75%;
+  width: 90%;
   height: 65px;
   padding: 20px;
   font-weight: bold;
@@ -305,6 +306,7 @@ main {
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
   background-color: whitesmoke;
   border-radius: 16px 0px 16px 0px;
+  color: grey;
 }
 .location-box .location {
   padding: 17px;
@@ -355,7 +357,7 @@ main {
   text-align: center;
 }
 .alternate {
-  padding: 15px;
+  padding: 2px;
   color: aliceblue;
   font-size: 35px;
   font-family: "Pacifico", cursive;
@@ -394,7 +396,7 @@ main {
   border: none;
   outline: none;
   color: #f5f5f5;
-  padding: 8px 24px;
+  padding: 6px 22px;
   font-size: 30px;
   border-radius: 50%;
 }
@@ -404,8 +406,8 @@ main {
   background-color: whitesmoke;
 }
 .list-group-item {
-  background-color: rgb(30, 144, 255);
-  color: #fff;
+  background-color: rgb(195, 223, 238);
+  color: grey;
   width: 75%;
   height: 63px;
   text-align: left;
@@ -416,8 +418,8 @@ main {
 }
 .list-group-item:hover {
   font-style: italic;
-  color: black;
-  background-color: rgb(173, 255, 47);
+  color: grey;
+  background-color: whitesmoke;
   transition: 0.5s;
   border-radius: 16px 0px 16px 0px;
   outline: none;
